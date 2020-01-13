@@ -48,6 +48,7 @@ public class StudentController {
     }
 
     @RequestMapping("queryStudentById")
+    @ExceptionHandler
     public StudentInfo queryStudentById(String id){
         StudentInfo studentInfo = studentService.queryStudentById(id);
         return studentInfo;
